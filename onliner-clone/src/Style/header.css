@@ -1,0 +1,8 @@
+.header__top{
+  display: flex;
+  justify-content: space-between;
+}
+.header__info-widget{
+  display: flex;
+  gap: 5px;
+}

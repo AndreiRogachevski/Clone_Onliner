@@ -1,0 +1,56 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 30px;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 10em;
+  object-fit: cover;
+  object-position: top;
+}
+.card-body{
+  padding: 0.85rem;
+}
+.card-category {
+  color: var(--bs-gray-600);
+  font-size: 0.75em;
+  margin-bottom: 0.5em;
+}
+.card-title {
+  height: 40px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.card-price {
+  font-size: 0.82em;
+  margin-bottom: 0.5em;
+  color: red;
+  font-weight: bolder;
+}
+.card-discount {
+  padding: 2px 4px;
+  background-color: red;
+  color: white;
+  border-radius: 15px;
+  font-size: 0.75em;
+  display: inline-flex;
+  align-items: center;
+}
+.card-stock {
+  font-size: 0.6em;
+  text-align: right;
+  margin: 0;
+  color: var(--bs-gray-600);
+}

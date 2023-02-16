@@ -4,6 +4,7 @@
 }
 .header__info-widget {
   display: flex;
+  align-items: center;
   gap: 5px;
 }
 .header__bottom {

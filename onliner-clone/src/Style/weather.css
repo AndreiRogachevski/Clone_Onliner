@@ -7,10 +7,35 @@
   display: inline-block;
   width: 32px;
   height: 32px;
-}
-.partly-cloudy-day {
-  background-image: url(../assets/weather_icons/partly-cloudy-day.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.snow {
+  background-image: url(../assets/weather_icons/snow.svg);
+}
+.rain {
+  background-image: url(../assets/weather_icons/rain.svg);
+}
+.fog {
+  background-image: url(../assets/weather_icons/fog.svg);
+}
+.wind {
+  background-image: url(../assets/weather_icons/wind.svg);
+}
+.cloudy {
+  background-image: url(../assets/weather_icons/cloudy.svg);
+}
+.partly-cloudy-day {
+  background-image: url(../assets/weather_icons/partly-cloudy-day.svg);
+}
+.partly-cloudy-night {
+  background-image: url(../assets/weather_icons/partly-cloudy-night.svg);
+}
+.clear-day {
+  background-image: url(../assets/weather_icons/clear-day.svg);
+}
+.clear-night {
+  background-image: url(../assets/weather_icons/clear-night.svg);
 }

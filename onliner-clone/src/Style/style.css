@@ -1,8 +1,5 @@
 .background-gradient {
   background-image: linear-gradient(to bottom, #fff, #fff 50%, #e3e3e3);
   background-repeat: repeat-x;
-  background-size: 100% 190px;
-}
-.preview img {
-  /* height: 10em; */
+  background-size: 100% 100%;
 }

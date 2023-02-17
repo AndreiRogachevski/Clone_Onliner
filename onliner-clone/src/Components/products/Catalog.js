@@ -3,60 +3,29 @@ import { useDispatch } from 'react-redux';
 import { productsApi } from '../../API/productAPI';
 import { useSelector } from 'react-redux';
 import { selectProducts } from '../../features/products/productSlice';
-
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/pagination';
-
-import '../../Style/swiper.css';
-
-// import required modules
-import { FreeMode } from 'swiper';
+import HotPrice from './HotPrice';
+import { postsApi } from '../../API/PostsAPI';
+import { selectPosts } from '../../features/posts/postsSlice';
 
 export default function Catalog() {
   const dispatch = useDispatch();
   const products = useSelector(selectProducts);
+  const posts = useSelector(selectPosts);
   useEffect(() => {
     dispatch(productsApi.fetchProducts());
+    dispatch(postsApi.fetchPosts());
   }, [dispatch]);
   return (
     <div className="preview">
       <h2>КАТАЛОГ</h2>
-      <Swiper
-        slidesPerView={8}
-        spaceBetween={5}
-        freeMode={true}
-        modules={[FreeMode]}
-        className="mySwiper"
-      >
-        {products
-          .slice()
-          .sort((a, b) => b.discountPercentage - a.discountPercentage)
-          .map((item) => (
-            <SwiperSlide key={item.id} className="card">
-              <img
-                src={item.thumbnail}
-                className="card-img-top"
-                alt="thumbnail"
-              />
-              <div className="card-body">
-                <p className="card-category">{item.category}</p>
-                <h6 className="card-title">{item.title}</h6>
-                <p className="card-price">
-                  {item.price} ${' '}
-                  <span className='card-discount'>
-                    <i class="bi bi-fire"></i> -{item.discountPercentage} %
-                  </span>
-                </p>
-                <p className="card-stock">{item.stock} шт.</p>
-              </div>
-            </SwiperSlide>
+      <HotPrice products={products} />
+      <div>
+        <ul>
+          {posts.map((item) => (
+            <li key={item.id}>{item.title}</li>
           ))}
-      </Swiper>
+        </ul>
+      </div>
     </div>
   );
 }

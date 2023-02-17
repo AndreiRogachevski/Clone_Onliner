@@ -20,6 +20,6 @@ export const productSlice = createSlice({
   },
 });
 
-export const selectProducts = (state) => state.products.data;
+export const selectProducts = (state) => state.products;
 
 export default productSlice.reducer;

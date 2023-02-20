@@ -5,7 +5,7 @@ export const productsApi = {
   fetchProducts: createAsyncThunk('products/fetchProducts', async () => {
     return axios
       .get(
-        'https://dummyjson.com/products?limit=0&select=id,thumbnail,price,discountPercentage'
+        'https://dummyjson.com/products?select=id,thumbnail,price,discountPercentage'
       )
       .then((res) => res.data);
   }),
